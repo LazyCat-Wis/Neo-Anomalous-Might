@@ -1,0 +1,439 @@
+15:47:32: 正在执行 ':classes :testClasses'…
+
+Starting Gradle Daemon...
+Gradle Daemon started in 6 s 301 ms
+
+> Configure project :
+Java: 17.0.12, JVM: 17.0.12+8-LTS-286 (Oracle Corporation), Arch: amd64
+
+> Task :compileJava
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:3: 错误: 找不到符号
+import com.otaku.neoanomalousmight.element.ElementalAttributes;
+                                          ^
+  符号:   类 ElementalAttributes
+  位置: 程序包 com.otaku.neoanomalousmight.element
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:4: 错误: 找不到符号
+import com.otaku.neoanomalousmight.role.Role;
+                                       ^
+  符号:   类 Role
+  位置: 程序包 com.otaku.neoanomalousmight.role
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:15: 错误: 找不到符号
+public class PlayerRole implements IPlayerRole {
+                                   ^
+  符号: 类 IPlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:17: 错误: 找不到符号
+    private Role selectedRole = null;
+            ^
+  符号:   类 Role
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:31: 错误: 找不到符号
+    public Role getSelectedRole() {
+           ^
+  符号:   类 Role
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:40: 错误: 找不到符号
+    public void setSelectedRole(Role role) {
+                                ^
+  符号:   类 Role
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRoleProvider.java:32: 错误: 找不到符号
+    public static final Capability<IPlayerRole> PLAYER_ROLE_CAPABILITY = CapabilityManager.get(new CapabilityToken<>(){});
+                                   ^
+  符号:   类 IPlayerRole
+  位置: 类 PlayerRoleProvider
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRoleProvider.java:123: 错误: 找不到符号
+    public static LazyOptional<IPlayerRole> getPlayerRole(Player player) {
+                               ^
+  符号:   类 IPlayerRole
+  位置: 类 PlayerRoleProvider
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\client\gui\RoleSelectionScreen.java:5: 错误: 找不到符号
+import com.otaku.neoanomalousmight.role.Role;
+                                       ^
+  符号:   类 Role
+  位置: 程序包 com.otaku.neoanomalousmight.role
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\client\gui\RoleSelectionScreen.java:85: 错误: 找不到符号
+    private void selectRole(Role role) {
+                            ^
+  符号:   类 Role
+  位置: 类 RoleSelectionScreen
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\core\event\ForgeBusEvents.java:6: 错误: 找不到符号
+import com.otaku.neoanomalousmight.element.ElementalInteraction;
+                                          ^
+  符号:   类 ElementalInteraction
+  位置: 程序包 com.otaku.neoanomalousmight.element
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\core\network\C2SChooseRolePacket.java:6: 错误: 找不到符号
+import com.otaku.neoanomalousmight.role.Role;
+                                       ^
+  符号:   类 Role
+  位置: 程序包 com.otaku.neoanomalousmight.role
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\core\network\C2SChooseRolePacket.java:27: 错误: 找不到符号
+    public C2SChooseRolePacket(Role role) {
+                               ^
+  符号:   类 Role
+  位置: 类 C2SChooseRolePacket
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:16: 错误: 找不到符号
+    public static final DeferredRegister<ElementType> ELEMENT_TYPES = DeferredRegister.create(RegistryHandler.ELEMENT_TYPE_REGISTRY_KEY, Neo_Anomalous_Might.MOD_ID);
+                                         ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:26: 错误: 找不到符号
+    public static final RegistryObject<ElementType> FIRE = registerElementType(ElementType.FIRE);
+                                       ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:27: 错误: 找不到符号
+    public static final RegistryObject<ElementType> WATER = registerElementType(ElementType.WATER);
+                                       ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:28: 错误: 找不到符号
+    public static final RegistryObject<ElementType> WIND = registerElementType(ElementType.WIND);
+                                       ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:29: 错误: 找不到符号
+    public static final RegistryObject<ElementType> THUNDER = registerElementType(ElementType.THUNDER);
+                                       ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:30: 错误: 找不到符号
+    public static final RegistryObject<ElementType> GRASS = registerElementType(ElementType.GRASS);
+                                       ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:31: 错误: 找不到符号
+    public static final RegistryObject<ElementType> ICE = registerElementType(ElementType.ICE);
+                                       ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:32: 错误: 找不到符号
+    public static final RegistryObject<ElementType> EARTH = registerElementType(ElementType.EARTH);
+                                       ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:33: 错误: 找不到符号
+    public static final RegistryObject<ElementType> NONE = registerElementType(ElementType.NONE);
+                                       ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:40: 错误: 找不到符号
+    private static RegistryObject<ElementType> registerElementType(ElementType elementType) {
+                                                                   ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:40: 错误: 找不到符号
+    private static RegistryObject<ElementType> registerElementType(ElementType elementType) {
+                                  ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:49: 错误: 找不到符号
+    public static ResourceLocation getElementResourceLocation(ElementType elementType) {
+                                                              ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:58: 错误: 找不到符号
+    public static String getElementDisplayName(ElementType elementType) {
+                                               ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:67: 错误: 找不到符号
+    public static String getElementEnglishName(ElementType elementType) {
+                                               ^
+  符号:   类 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\registry\RegistryHandler.java:4: 错误: 找不到符号
+import com.otaku.neoanomalousmight.element.ElementType;
+                                          ^
+  符号:   类 ElementType
+  位置: 程序包 com.otaku.neoanomalousmight.element
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\registry\RegistryHandler.java:5: 错误: 找不到符号
+import com.otaku.neoanomalousmight.role.Role;
+                                       ^
+  符号:   类 Role
+  位置: 程序包 com.otaku.neoanomalousmight.role
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\registry\RegistryHandler.java:19: 错误: 找不到符号
+    public static final ResourceKey<net.minecraft.core.Registry<ElementType>> ELEMENT_TYPE_REGISTRY_KEY = 
+                                                                ^
+  符号:   类 ElementType
+  位置: 类 RegistryHandler
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\registry\RegistryHandler.java:22: 错误: 找不到符号
+    public static net.minecraft.core.Registry<ElementType> ELEMENT_TYPE_REGISTRY;
+                                              ^
+  符号:   类 ElementType
+  位置: 类 RegistryHandler
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\registry\RegistryHandler.java:25: 错误: 找不到符号
+    public static final ResourceKey<net.minecraft.core.Registry<Role>> ROLE_REGISTRY_KEY = 
+                                                                ^
+  符号:   类 Role
+  位置: 类 RegistryHandler
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\registry\RegistryHandler.java:28: 错误: 找不到符号
+    public static net.minecraft.core.Registry<Role> ROLE_REGISTRY;
+                                              ^
+  符号:   类 Role
+  位置: 类 RegistryHandler
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:4: 错误: 找不到符号
+import com.otaku.neoanomalousmight.element.ElementType;
+                                          ^
+  符号:   类 ElementType
+  位置: 程序包 com.otaku.neoanomalousmight.element
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:19: 错误: 找不到符号
+    public static final DeferredRegister<Role> ROLES = DeferredRegister.create(
+                                         ^
+  符号:   类 Role
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:33: 错误: 找不到符号
+    public static final RegistryObject<Role> SU_LIN = registerRole(
+                                       ^
+  符号:   类 Role
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:50: 错误: 找不到符号
+    public static final RegistryObject<Role> SU_WAN = registerRole(
+                                       ^
+  符号:   类 Role
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:81: 错误: 找不到符号
+    private static RegistryObject<Role> registerRole(String name, String displayName, String description, ElementType elementType,
+                                                                                                          ^
+  符号:   类 ElementType
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:81: 错误: 找不到符号
+    private static RegistryObject<Role> registerRole(String name, String displayName, String description, ElementType elementType,
+                                  ^
+  符号:   类 Role
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:106: 错误: 找不到符号
+    public static java.util.List<Role> getAllRoles() {
+                                 ^
+  符号:   类 Role
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:118: 错误: 找不到符号
+    public static Role getRole(ResourceLocation resourceLocation) {
+                  ^
+  符号:   类 Role
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:131: 错误: 找不到符号
+    public static ResourceLocation getRoleResourceLocation(Role role) {
+                                                           ^
+  符号:   类 Role
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:30: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:39: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:48: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:57: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:66: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:75: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:84: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:94: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:124: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:130: 错误: 找不到符号
+        float elementBonus = baseHealth * ElementalAttributes.getElementalAttributeBonus(selectedRole.getElementType(), "health");
+                                          ^
+  符号:   变量 ElementalAttributes
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:139: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:145: 错误: 找不到符号
+        float elementBonus = baseAttack * ElementalAttributes.getElementalAttributeBonus(selectedRole.getElementType(), "damage");
+                                          ^
+  符号:   变量 ElementalAttributes
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:154: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:160: 错误: 找不到符号
+        float elementBonus = baseDefense * ElementalAttributes.getElementalAttributeBonus(selectedRole.getElementType(), "defense");
+                                           ^
+  符号:   变量 ElementalAttributes
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:169: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:175: 错误: 找不到符号
+        float elementBonus = baseMana * ElementalAttributes.getElementalAttributeBonus(selectedRole.getElementType(), "mana");
+                                        ^
+  符号:   变量 ElementalAttributes
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:184: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:190: 错误: 找不到符号
+        float elementBonus = ElementalAttributes.getElementalAttributeBonus(selectedRole.getElementType(), "critChance");
+                             ^
+  符号:   变量 ElementalAttributes
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:199: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:205: 错误: 找不到符号
+        float elementBonus = ElementalAttributes.getElementalAttributeBonus(selectedRole.getElementType(), "critDamage");
+                             ^
+  符号:   变量 ElementalAttributes
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:214: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:220: 错误: 找不到符号
+        float elementBonus = ElementalAttributes.getElementalAttributeBonus(selectedRole.getElementType(), "evasion");
+                             ^
+  符号:   变量 ElementalAttributes
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:229: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:235: 错误: 找不到符号
+        float elementBonus = ElementalAttributes.getElementalAttributeBonus(selectedRole.getElementType(), "movementSpeed");
+                             ^
+  符号:   变量 ElementalAttributes
+  位置: 类 PlayerRole
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:244: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRole.java:267: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\capability\player\PlayerRoleProvider.java:40: 错误: 找不到符号
+        event.register(IPlayerRole.class);
+                       ^
+  符号:   类 IPlayerRole
+  位置: 类 PlayerRoleProvider
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\client\gui\RoleSelectionScreen.java:25: 警告: [removal] ResourceLocation 中的 ResourceLocation(String,String) 已过时, 且标记为待删除
+    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(MOD_ID, "textures/gui/role_selection.png");
+                                                               ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\client\gui\RoleSelectionScreen.java:58: 错误: 找不到符号
+        for (Role role : ModRoles.getAllRoles()) {
+             ^
+  符号:   类 Role
+  位置: 类 RoleSelectionScreen
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\client\gui\RoleSelectionScreen.java:120: 错误: 找不到符号
+        for (Role role : ModRoles.getAllRoles()) {
+             ^
+  符号:   类 Role
+  位置: 类 RoleSelectionScreen
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\core\event\ForgeBusEvents.java:91: 错误: 找不到符号
+                    ElementalInteraction.applyElementalEffect(player, target, role.getSelectedRole().getElementType(), com.otaku.neoanomalousmight.element.ElementType.NONE);
+                                                                                                                                                          ^
+  符号:   类 ElementType
+  位置: 程序包 com.otaku.neoanomalousmight.element
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\core\event\ForgeBusEvents.java:91: 错误: 找不到符号
+                    ElementalInteraction.applyElementalEffect(player, target, role.getSelectedRole().getElementType(), com.otaku.neoanomalousmight.element.ElementType.NONE);
+                    ^
+  符号:   变量 ElementalInteraction
+  位置: 类 ForgeBusEvents
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\core\event\ForgeBusEvents.java:208: 错误: 程序包com.otaku.neoanomalousmight.core.util不存在
+                                    healthAttribute.removeModifier(com.otaku.neoanomalousmight.core.util.HealthAttributeModifier.HEALTH_MODIFIER_ID);
+                                                                                                        ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\core\event\ForgeBusEvents.java:212: 错误: 程序包com.otaku.neoanomalousmight.core.util不存在
+                                            com.otaku.neoanomalousmight.core.util.HealthAttributeModifier.HEALTH_MODIFIER_ID,
+                                                                                 ^
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\core\network\C2SChooseRolePacket.java:69: 错误: 找不到符号
+            Role role = ModRoles.getRole(message.roleId);
+            ^
+  符号:   类 Role
+  位置: 类 C2SChooseRolePacket
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:26: 错误: 找不到符号
+    public static final RegistryObject<ElementType> FIRE = registerElementType(ElementType.FIRE);
+                                                                               ^
+  符号:   变量 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:27: 错误: 找不到符号
+    public static final RegistryObject<ElementType> WATER = registerElementType(ElementType.WATER);
+                                                                                ^
+  符号:   变量 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:28: 错误: 找不到符号
+    public static final RegistryObject<ElementType> WIND = registerElementType(ElementType.WIND);
+                                                                               ^
+  符号:   变量 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:29: 错误: 找不到符号
+    public static final RegistryObject<ElementType> THUNDER = registerElementType(ElementType.THUNDER);
+                                                                                  ^
+  符号:   变量 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:30: 错误: 找不到符号
+    public static final RegistryObject<ElementType> GRASS = registerElementType(ElementType.GRASS);
+                                                                                ^
+  符号:   变量 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:31: 错误: 找不到符号
+    public static final RegistryObject<ElementType> ICE = registerElementType(ElementType.ICE);
+                                                                              ^
+  符号:   变量 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:32: 错误: 找不到符号
+    public static final RegistryObject<ElementType> EARTH = registerElementType(ElementType.EARTH);
+                                                                                ^
+  符号:   变量 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\element\Elements.java:33: 错误: 找不到符号
+    public static final RegistryObject<ElementType> NONE = registerElementType(ElementType.NONE);
+                                                                               ^
+  符号:   变量 ElementType
+  位置: 类 Elements
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\registry\RegistryHandler.java:36: 错误: 找不到符号
+        ELEMENT_TYPE_REGISTRY = new RegistryBuilder<ElementType>(ELEMENT_TYPE_REGISTRY_KEY)
+                                                    ^
+  符号:   类 ElementType
+  位置: 类 RegistryHandler
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\registry\RegistryHandler.java:46: 错误: 找不到符号
+        ROLE_REGISTRY = new RegistryBuilder<Role>(ROLE_REGISTRY_KEY)
+                                            ^
+  符号:   类 Role
+  位置: 类 RegistryHandler
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:37: 错误: 找不到符号
+            ElementType.WIND,
+            ^
+  符号:   变量 ElementType
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:54: 错误: 找不到符号
+            ElementType.THUNDER,
+            ^
+  符号:   变量 ElementType
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:86: 错误: 找不到符号
+        return ROLES.register(name, () -> new Role(
+                                              ^
+  符号:   类 Role
+  位置: 类 ModRoles
+E:\Workpace\MOD\Neo Anomalous Might\src\main\java\com\otaku\neoanomalousmight\role\ModRoles.java:121: 错误: 找不到符号
+                .filter(role -> role.getRegistryName().equals(resourceLocation))
+                                    ^
+  符号:   方法 getRegistryName()
+  位置: 类型为Object的变量 role
+90 个错误
+1 个警告
+
+> Task :compileJava FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 55s
+1 actionable task: 1 executed
+15:48:34: 执行完成 ':classes :testClasses'。

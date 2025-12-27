@@ -1,0 +1,15 @@
+{
+  "attribute.name.level": "Level",
+  "attribute.name.defense": "Defense",
+  "attribute.name.attack_damage_melee": "Melee Attack Damage",
+  "attribute.name.mana": "Mana",
+  "attribute.name.elemental_resistance": "Elemental Resistance",
+  "attribute.name.evasion_chance": "Evasion Chance",
+  "attribute.name.critical_chance": "Critical Chance",
+  "attribute.name.critical_damage_multiplier": "Critical Damage Multiplier",
+  "screen.neo_anomalous_might.role_selection.title": "Choose Your Role",
+  "role.neo_anomalous_might.warrior.name": "Warrior",
+  "role.neo_anomalous_might.warrior.description": "A master of melee combat.",
+  "role.neo_anomalous_might.mage.name": "Mage",
+  "role.neo_anomalous_might.mage.description": "A wielder of arcane magic."
+}

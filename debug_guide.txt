@@ -1,0 +1,12 @@
+游戏客户端已经成功启动！请按照以下步骤进行测试：
+
+1. 进入游戏存档，观察是否还有"无效玩家数据"的提示
+2. 如果问题仍然存在，请查看游戏日志中关于角色数据反序列化的详细信息
+3. 特别关注包含"Deserializing role from NBT"和"Invalid role ID"的日志条目
+
+修复说明：
+- 在PlayerRoleProvider类的deserializeNBT方法中添加了详细的日志记录
+- 增加了双重注册表检查机制（Forge注册表和ModRoles管理类）
+- 添加了完整的异常处理，确保即使出现错误也不会导致数据损坏
+
+日志文件位置：run/logs/latest.log

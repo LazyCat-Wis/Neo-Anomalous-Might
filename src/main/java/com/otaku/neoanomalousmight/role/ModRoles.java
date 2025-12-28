@@ -4,6 +4,7 @@ import com.otaku.neoanomalousmight.Neo_Anomalous_Might;
 import com.otaku.neoanomalousmight.element.ElementType;
 import com.otaku.neoanomalousmight.init.ModRegistration;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 // import net.minecraftforge.registries.ForgeRegistries; // 未使用的导入
@@ -122,5 +123,10 @@ public class ModRoles {
     public static ResourceLocation getRoleResourceLocation(Role role) {
         return role.getRegistryName();
     }
+
+    public static void register(IEventBus eventBus) {
+        ROLES.register(eventBus);
+    }
 }
-
+
+

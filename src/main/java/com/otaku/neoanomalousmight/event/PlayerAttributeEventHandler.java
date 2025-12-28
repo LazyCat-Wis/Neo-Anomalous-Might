@@ -1,4 +1,4 @@
-package com.otaku.neoanomalousmight.core.event;
+package com.otaku.neoanomalousmight.event;
 
 import com.otaku.neoanomalousmight.capability.player.PlayerRoleProvider;
 import com.otaku.neoanomalousmight.role.Role;

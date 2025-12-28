@@ -1,6 +1,6 @@
 package com.otaku.neoanomalousmight.client.gui;
 
-import com.otaku.neoanomalousmight.core.network.C2SChooseRolePacket;
+import com.otaku.neoanomalousmight.network.C2SChooseRolePacket;
 import com.otaku.neoanomalousmight.role.ModRoles;
 import com.otaku.neoanomalousmight.role.Role;
 import net.minecraft.client.Minecraft;
@@ -10,7 +10,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 
 
-import static com.otaku.neoanomalousmight.core.network.NetworkHandler.INSTANCE;
+import static com.otaku.neoanomalousmight.network.NetworkHandler.INSTANCE;
 
 /**
  * 角色选择界面

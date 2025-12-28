@@ -46,9 +46,54 @@
 
 ---
 
+## 优化后的包结构
+
+、、、
+com.otaku.neoanomalousmight/
+├── capability/        # 能力系统
+├── client/            # 客户端专用代码
+├── common/            # 通用代码
+├── element/           # 元素系统
+├── entity/            # 实体系统
+├── event/             # 事件处理（从core/event分离）
+├── init/              # 初始化代码
+├── network/           # 网络通信（从core/network分离）
+├── role/              # 角色系统
+├── server/            # 服务器端专用代码（新创建）
+├── util/              # 工具类（从core/util分离）
+└── Neo_Anomalous_Might.java # 主类
+、、、
+
+### 包结构说明
+
+- **capability/**: 玩家角色能力系统，包含IPlayerRole、PlayerRole和PlayerRoleProvider
+- **client/**: 客户端专用代码，包含GUI、渲染器和调试命令
+  - **client/commands/**: 客户端调试命令
+  - **client/gui/**: 图形用户界面
+  - **client/render/**: 实体渲染器
+- **common/**: 通用配置和注册代码
+- **element/**: 元素系统，定义元素类型和交互
+- **entity/**: 自定义实体
+- **event/**: 事件处理系统，包含所有事件监听器
+- **init/**: 模组初始化和注册
+- **network/**: 网络通信，包含客户端和服务器之间的数据包
+- **role/**: 角色系统，定义可用角色和属性
+- **server/**: 服务器端专用代码（新创建，用于存放服务器专属逻辑）
+- **util/**: 工具类，提供通用功能
+
+### 优化说明
+
+1. **网络代码分离**: 将网络相关代码从core/network移到独立的network包
+2. **事件代码分离**: 将事件处理代码从core/event移到独立的event包
+3. **工具类分离**: 将工具类从core/util移到独立的util包
+4. **服务器包创建**: 为服务器端专用代码创建了独立的server包
+5. **引用路径更新**: 所有引用移动后类的代码都已更新
+
+这个优化后的包结构更加清晰、模块化，符合Minecraft Mod开发的最佳实践，便于维护和扩展。
+
 ## ForgeBusEvents.java
 
-**文件路径**: `src/main/java/com/otaku/neoanomalousmight/core/event/ForgeBusEvents.java`
+**文件路径**: `src/main/java/com/otaku/neoanomalousmight/event/ForgeBusEvents.java`
 
 ```java
 /**

@@ -3,6 +3,7 @@ package com.otaku.neoanomalousmight.element;
 import com.otaku.neoanomalousmight.Neo_Anomalous_Might;
 import com.otaku.neoanomalousmight.init.ModRegistration;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -62,5 +63,9 @@ public class Elements {
      */
     public static String getElementEnglishName(ElementType elementType) {
         return elementType.getEnglishName();
+    }
+
+    public static void register(IEventBus eventBus) {
+        ELEMENT_TYPES.register(eventBus);
     }
 }

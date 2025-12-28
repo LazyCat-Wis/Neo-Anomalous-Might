@@ -1,4 +1,4 @@
-package com.otaku.neoanomalousmight.core.network;
+package com.otaku.neoanomalousmight.network;
 
 import com.otaku.neoanomalousmight.capability.player.IPlayerRole;
 import com.otaku.neoanomalousmight.capability.player.PlayerRoleProvider;

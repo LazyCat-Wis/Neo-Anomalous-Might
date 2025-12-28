@@ -1,4 +1,4 @@
-package com.otaku.neoanomalousmight.core.network;
+package com.otaku.neoanomalousmight.network;
 
 
 import com.otaku.neoanomalousmight.capability.player.PlayerRoleProvider;
@@ -82,7 +82,7 @@ public class C2SChooseRolePacket {
                 
                 // 立即应用角色属性到玩家实体
                 // 应用角色属性，直接调用静态方法
-                com.otaku.neoanomalousmight.core.event.PlayerAttributeEventHandler.applyRoleAttributes(player);
+                com.otaku.neoanomalousmight.event.PlayerAttributeEventHandler.applyRoleAttributes(player);
             });
         });
         

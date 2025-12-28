@@ -1,4 +1,4 @@
-package com.otaku.neoanomalousmight.core.util;
+package com.otaku.neoanomalousmight.util;
 
 import java.util.UUID;
 

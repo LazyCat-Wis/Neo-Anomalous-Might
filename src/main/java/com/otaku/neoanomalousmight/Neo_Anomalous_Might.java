@@ -2,7 +2,7 @@ package com.otaku.neoanomalousmight;
 
 import com.mojang.logging.LogUtils;
 import com.otaku.neoanomalousmight.common.Config;
-import com.otaku.neoanomalousmight.core.network.NetworkHandler;
+import com.otaku.neoanomalousmight.network.NetworkHandler;
 import com.otaku.neoanomalousmight.element.Elements;
 import com.otaku.neoanomalousmight.init.ModRegistration;
 import com.otaku.neoanomalousmight.role.ModRoles;
@@ -45,13 +45,13 @@ public class Neo_Anomalous_Might
         // Initialize the registration system
         ModRegistration.init(modEventBus);
         
-        // Register the element types
-        Elements.ELEMENT_TYPES.register(modEventBus);
-        
         // Register the roles
-        ModRoles.ROLES.register(modEventBus);
+        ModRoles.register(modEventBus);
         
         // Register the element system
+        Elements.register(modEventBus);
+
+        // Register the roles
         ModRoles.registerRoles();
 
         // Register to the Forge event bus

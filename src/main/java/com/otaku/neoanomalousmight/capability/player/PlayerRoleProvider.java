@@ -8,6 +8,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.common.util.LazyOptional;
@@ -38,26 +39,30 @@ public class PlayerRoleProvider {
     @SubscribeEvent
     public static void attachCapability(AttachCapabilitiesEvent<LivingEntity> event) {
         if (event.getObject() instanceof Player) {
-            System.out.println("[NeoAnomalousMight] Attaching role capability to player: " + event.getObject().getName().getString());
-            // 创建角色能力提供者
+            // 创建角色能力实现实例
             PlayerRoleImpl roleImpl = new PlayerRoleImpl();
-            System.out.println("[NeoAnomalousMight] Created PlayerRoleImpl instance");
             
-            // 附加能力
+            // 附加能力，使用ICapabilitySerializable确保数据能被自动保存和加载
             event.addCapability(
                     net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(MOD_ID, "player_role"),
-                    new ICapabilityProvider() {
+                    new ICapabilitySerializable<CompoundTag>() {
                         @Nonnull
                         @Override
                         public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
-                            System.out.println("[NeoAnomalousMight] getCapability called for cap: " + cap.getName());
-                            System.out.println("[NeoAnomalousMight] PLAYER_ROLE_CAPABILITY name: " + PLAYER_ROLE_CAPABILITY.getName());
-                            System.out.println("[NeoAnomalousMight] Capability match: " + PLAYER_ROLE_CAPABILITY.orEmpty(cap, LazyOptional.of(() -> roleImpl)).isPresent());
                             return PLAYER_ROLE_CAPABILITY.orEmpty(cap, LazyOptional.of(() -> roleImpl));
+                        }
+
+                        @Override
+                        public CompoundTag serializeNBT() {
+                            return roleImpl.saveNBTData();
+                        }
+
+                        @Override
+                        public void deserializeNBT(CompoundTag nbt) {
+                            roleImpl.loadNBTData(nbt);
                         }
                     }
             );
-            System.out.println("[NeoAnomalousMight] Role capability attached successfully");
         }
     }
     
@@ -73,9 +78,7 @@ public class PlayerRoleProvider {
          */
         @SubscribeEvent
         public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-            System.out.println("[NeoAnomalousMight] Registering role capability");
             event.register(IPlayerRole.class);
-            System.out.println("[NeoAnomalousMight] Role capability registered successfully");
         }
     }
     

@@ -1,0 +1,13 @@
+{
+  "attribute.name.level": "等级",
+  "attribute.name.defense": "防御力",
+  "attribute.name.attack_damage_melee": "近战攻击力",
+  "attribute.name.mana": "法力值",
+  "attribute.name.elemental_resistance": "元素抗性",
+  "attribute.name.evasion_chance": "闪避几率",
+  "attribute.name.critical_chance": "暴击几率",
+  "attribute.name.critical_damage_multiplier": "暴击伤害倍率",
+  "screen.neo_anomalous_might.role_selection.title": "选择你的角色",
+  "role.neoanomalousmight.su_lin": "苏林",
+  "role.neoanomalousmight.su_wan": "苏皖"
+}

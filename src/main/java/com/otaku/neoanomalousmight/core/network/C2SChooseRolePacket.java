@@ -81,6 +81,9 @@ public class C2SChooseRolePacket {
                 
                 // 通知玩家角色选择成功
                 player.sendSystemMessage(net.minecraft.network.chat.Component.literal("你选择了角色: " + role.getName()));
+                
+                // 立即应用角色属性到玩家实体
+                com.otaku.neoanomalousmight.core.events.PlayerAttributeEventHandler.applyRoleAttributes(player);
             });
         });
         

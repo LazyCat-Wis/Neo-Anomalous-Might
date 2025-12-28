@@ -1,7 +1,7 @@
 package com.otaku.neoanomalousmight.role;
 
-import com.otaku.neoanomalousmight.capability.player.PlayerRoleProvider;
 import com.otaku.neoanomalousmight.capability.player.IPlayerRole;
+import com.otaku.neoanomalousmight.capability.player.PlayerRoleProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.util.LazyOptional;
 
@@ -18,7 +18,7 @@ public class RoleManager {
      * @return 角色能力的LazyOptional
      */
     public static LazyOptional<IPlayerRole> getPlayerRole(Player player) {
-        return PlayerRoleProvider.getPlayerRole(player);
+        return player.getCapability(PlayerRoleProvider.PLAYER_ROLE_CAPABILITY);
     }
     
     /**
@@ -46,7 +46,7 @@ public class RoleManager {
      * @return 玩家选择的角色，如果没有选择则返回null
      */
     public static Role getSelectedRole(Player player) {
-        return getPlayerRole(player).map(IPlayerRole::getSelectedRole).orElse(null);
+        return getPlayerRole(player).map(IPlayerRole::getRole).orElse(null);
     }
     
     /**
@@ -55,34 +55,6 @@ public class RoleManager {
      * @param role 要设置的角色
      */
     public static void setSelectedRole(Player player, Role role) {
-        getPlayerRole(player).ifPresent(cap -> cap.setSelectedRole(role));
-    }
-    
-    /**
-     * 获取玩家的等级
-     * @param player 玩家对象
-     * @return 玩家等级
-     */
-    public static int getLevel(Player player) {
-        return getPlayerRole(player).map(IPlayerRole::getLevel).orElse(1);
-    }
-    
-    /**
-     * 获取玩家的经验值
-     * @param player 玩家对象
-     * @return 玩家经验值
-     */
-    public static int getExperience(Player player) {
-        return getPlayerRole(player).map(IPlayerRole::getExperience).orElse(0);
-    }
-    
-    /**
-     * 增加玩家的经验值
-     * @param player 玩家对象
-     * @param experience 要增加的经验值
-     * @return 是否升级
-     */
-    public static boolean addExperience(Player player, int experience) {
-        return getPlayerRole(player).map(cap -> cap.addExperience(experience)).orElse(false);
+        getPlayerRole(player).ifPresent(cap -> cap.setRole(role));
     }
 }

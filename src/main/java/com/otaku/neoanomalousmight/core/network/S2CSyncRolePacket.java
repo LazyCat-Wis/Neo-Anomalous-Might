@@ -23,7 +23,7 @@ public class S2CSyncRolePacket {
      * @param roleCapability 玩家角色能力
      */
     public S2CSyncRolePacket(IPlayerRole roleCapability) {
-        this.playerRoleData = roleCapability.saveNBTData();
+        this.playerRoleData = roleCapability.serializeNBT();
     }
     
     /**
@@ -65,7 +65,7 @@ public class S2CSyncRolePacket {
             
             // 加载角色数据
             player.getCapability(PlayerRoleProvider.PLAYER_ROLE_CAPABILITY).ifPresent(roleCapability -> {
-                roleCapability.loadNBTData(message.playerRoleData);
+                roleCapability.deserializeNBT(message.playerRoleData);
             });
         });
         

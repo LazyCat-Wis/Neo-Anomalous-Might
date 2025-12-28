@@ -1,0 +1,28 @@
+{
+  "type": "neo_anomalous_might:test_ai",
+  "modifiers": [],
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        }
+      ]
+    }
+  ],
+  "entity_type": "neo_anomalous_might:test_ai",
+  "spawn_rules": {
+    "type": "neo_anomalous_might:test_ai",
+    "conditions": {
+      "type": "minecraft:spawns_underwater",
+      "inverted": true
+    }
+  }
+}

@@ -1,17 +1,23 @@
-package com.otaku.neoanomalousmight.registration;
+package com.otaku.neoanomalousmight.init;
 
 import com.otaku.neoanomalousmight.Neo_Anomalous_Might;
 import com.otaku.neoanomalousmight.element.ElementType;
 import com.otaku.neoanomalousmight.role.Role;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import com.otaku.neoanomalousmight.entity.TestEntity;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.NewRegistryEvent;
 import net.minecraftforge.registries.RegistryBuilder;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
@@ -31,6 +37,17 @@ public class ModRegistration {
     // 注册器 - 用于注册具体的元素类型
     public static final DeferredRegister<ElementType> ELEMENT_TYPES = 
             DeferredRegister.create(ELEMENT_TYPE_REGISTRY_KEY, Neo_Anomalous_Might.MOD_ID);
+    
+    // 实体注册器
+    public static final DeferredRegister<EntityType<?>> ENTITIES = 
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Neo_Anomalous_Might.MOD_ID);
+    
+    // 测试体AI实体注册
+    public static final RegistryObject<EntityType<TestEntity>> TEST_ENTITY = ENTITIES.register("test_ai", 
+            () -> EntityType.Builder.of(TestEntity::new, MobCategory.MISC)
+                    .sized(1.0F, 2.0F)
+                    .build("test_ai")
+    );
 
     // 注册表实例的Supplier
     private static Supplier<IForgeRegistry<ElementType>> elementTypeRegistrySupplier;
@@ -43,6 +60,8 @@ public class ModRegistration {
     public static void init(IEventBus modEventBus) {
         // 注册元素和角色实例
         ELEMENT_TYPES.register(modEventBus);
+        // 注册实体
+        ENTITIES.register(modEventBus);
     }
 
     /**
@@ -79,5 +98,14 @@ public class ModRegistration {
      */
     public static IForgeRegistry<Role> getRoleRegistry() {
         return roleRegistrySupplier.get();
+    }
+
+    /**
+     * 处理实体属性创建事件
+     */
+    @SubscribeEvent
+    public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+        // 注册测试体AI实体的属性
+        event.put(TEST_ENTITY.get(), TestEntity.createAttributes().build());
     }
 }

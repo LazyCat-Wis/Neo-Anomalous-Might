@@ -26,7 +26,7 @@ import static com.otaku.neoanomalousmight.Neo_Anomalous_Might.MOD_ID;
  * 处理游戏中的各种事件，如玩家登录、攻击、伤害等
  */
 @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class ForgeBusEvents {
+public class ModForgeEvents {
 
     /**
      * 玩家加入世界事件
@@ -201,13 +201,3 @@ public class ForgeBusEvents {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-

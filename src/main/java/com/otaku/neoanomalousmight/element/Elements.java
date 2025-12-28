@@ -1,7 +1,7 @@
 package com.otaku.neoanomalousmight.element;
 
 import com.otaku.neoanomalousmight.Neo_Anomalous_Might;
-import com.otaku.neoanomalousmight.registration.ModRegistration;
+import com.otaku.neoanomalousmight.init.ModRegistration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;

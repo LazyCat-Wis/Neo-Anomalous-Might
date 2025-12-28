@@ -194,9 +194,6 @@ public class RoleSelectionScreen extends Screen {
             guiGraphics.drawString(this.font, "基础属性:", detailX, detailY, 0xFFFFFF);
             detailY += 20;
             
-            // 渲染各项属性，确保不超出GUI边界
-            int propertiesStartY = detailY;
-            
             // 计算每行文本的最大宽度（确保在GUI边界内）
             int maxLineWidth = detailWidth - 20;
             

@@ -2,7 +2,7 @@ package com.otaku.neoanomalousmight.role;
 
 import com.otaku.neoanomalousmight.Neo_Anomalous_Might;
 import com.otaku.neoanomalousmight.element.ElementType;
-import com.otaku.neoanomalousmight.registration.ModRegistration;
+import com.otaku.neoanomalousmight.init.ModRegistration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -123,4 +123,4 @@ public class ModRoles {
         return role.getRegistryName();
     }
 }
-
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+  <!-- 深色半透明背景 -->
+  <rect width="256" height="256" fill="#1a1a2e" opacity="0.9"/>
+  
+  <!-- 边框 -->
+  <rect x="2" y="2" width="252" height="252" fill="none" stroke="#16213e" stroke-width="4"/>
+  
+  <!-- 标题栏 -->
+  <rect x="0" y="0" width="256" height="32" fill="#0f3460"/>
+  
+  <!-- 分隔线 -->
+  <line x1="0" y1="32" x2="256" y2="32" stroke="#16213e" stroke-width="2"/>
+  <line x1="0" y1="64" x2="256" y2="64" stroke="#16213e" stroke-width="1"/>
+  <line x1="0" y1="128" x2="256" y2="128" stroke="#16213e" stroke-width="1"/>
+  <line x1="0" y1="192" x2="256" y2="192" stroke="#16213e" stroke-width="1"/>
+  
+  <!-- 装饰性元素 -->
+  <circle cx="32" cy="32" r="8" fill="#e94560"/>
+  <circle cx="48" cy="32" r="8" fill="#ffd166"/>
+  <circle cx="64" cy="32" r="8" fill="#06d6a0"/>
+  
+  <!-- 属性区域背景 -->
+  <rect x="8" y="40" width="240" height="208" fill="#16213e" opacity="0.3" rx="4" ry="4"/>
+</svg>

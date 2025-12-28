@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:entity/player",
+  "textures": {
+    "skin": "neo_anomalous_might:textures/entity/test_entity.png"
+  }
+}

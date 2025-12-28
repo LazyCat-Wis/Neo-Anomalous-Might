@@ -1,11 +1,12 @@
 package com.otaku.neoanomalousmight;
 
 import com.mojang.logging.LogUtils;
-
+import com.otaku.neoanomalousmight.common.Config;
 import com.otaku.neoanomalousmight.core.network.NetworkHandler;
 import com.otaku.neoanomalousmight.element.Elements;
+import com.otaku.neoanomalousmight.init.ModRegistration;
 import com.otaku.neoanomalousmight.role.ModRoles;
-import com.otaku.neoanomalousmight.registration.ModRegistration;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,14 +31,16 @@ public class Neo_Anomalous_Might
     public static final String MOD_ID = "neo_anomalous_might";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+    
+    // 按键映射：打开属性面板
+    public static KeyMapping openAttributePanelKey;
 
-    public Neo_Anomalous_Might(FMLJavaModLoadingContext context)
+    public Neo_Anomalous_Might()
     {
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);
-
         
         // Initialize the registration system
         ModRegistration.init(modEventBus);
@@ -49,21 +52,15 @@ public class Neo_Anomalous_Might
         ModRoles.ROLES.register(modEventBus);
         
         // Register the element system
-        Elements.registerElements();
-        
-        // Register the role system
         ModRoles.registerRoles();
-        
-        // Role capability is registered automatically via event listener in com.otaku.neoanomalousmight.capability.player.PlayerRoleProvider
-        
+
         // Register to the Forge event bus
         MinecraftForge.EVENT_BUS.register(this);
-
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-
+        
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        FMLJavaModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -100,13 +97,11 @@ public class Neo_Anomalous_Might
         LOGGER.info("HELLO from server starting");
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    // You can use EventBusSubscriber and let the Event Bus discover methods to call
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());

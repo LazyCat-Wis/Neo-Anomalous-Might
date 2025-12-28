@@ -1,0 +1,14 @@
+{
+  "key.categories.neoanomalousmight": "Neo Anomalous Might",
+  "key.neoanomalousmight.open_attributes": "Open Attribute Panel",
+  "gui.neoanomalousmight.attribute_panel.title": "Attribute Panel",
+  "gui.neoanomalousmight.attribute_panel.player_name": "Player Name: %s",
+  "gui.neoanomalousmight.attribute_panel.selected_role": "Selected Role: %s",
+  "gui.neoanomalousmight.attribute_panel.basic_attributes": "--- Basic Attributes ---",
+  "gui.neoanomalousmight.attribute_panel.health": "Health: %.1f",
+  "gui.neoanomalousmight.attribute_panel.mana": "Mana: %.1f",
+  "gui.neoanomalousmight.attribute_panel.armor": "Armor: %.1f",
+  "gui.neoanomalousmight.attribute_panel.attack": "Attack: %.1f",
+  "gui.neoanomalousmight.attribute_panel.elemental_resist": "Elemental Resist: %.1f",
+  "gui.neoanomalousmight.attribute_panel.close": "Close"
+}

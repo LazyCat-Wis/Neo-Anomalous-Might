@@ -75,15 +75,14 @@ public class C2SChooseRolePacket {
             
             // 设置玩家角色
             player.getCapability(PlayerRoleProvider.PLAYER_ROLE_CAPABILITY).ifPresent(roleCapability -> {
-                roleCapability.setSelectedRole(role);
-                roleCapability.setLevel(1);
-                roleCapability.setExperience(0);
+                roleCapability.setRole(role);
                 
                 // 通知玩家角色选择成功
                 player.sendSystemMessage(net.minecraft.network.chat.Component.literal("你选择了角色: " + role.getName()));
                 
                 // 立即应用角色属性到玩家实体
-                com.otaku.neoanomalousmight.core.events.PlayerAttributeEventHandler.applyRoleAttributes(player);
+                // 应用角色属性，直接调用静态方法
+                com.otaku.neoanomalousmight.core.event.PlayerAttributeEventHandler.applyRoleAttributes(player);
             });
         });
         
